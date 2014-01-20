@@ -44,9 +44,10 @@
     self.celsiusTextField.delegate = self;
     self.fahrenheitTextField.delegate = self;
     
-    [self.convertButton addTarget:self action:@selector(updateValues) forControlEvents:UIControlEventTouchDown];
+    //[self.convertButton addTarget:self action:@selector(updateValues) forControlEvents:UIControlEventTouchDown];
     
     [self.fahrenheitTextField addTarget:self action:@selector(fahrenheitTextFieldDidChange) forControlEvents:UIControlEventEditingChanged];
+    
     [self.celsiusTextField addTarget:self action:@selector(celsiusTextFieldDidChange) forControlEvents:UIControlEventEditingChanged];
     
     //[self updateValues];
@@ -59,6 +60,42 @@
 }
 
 # pragma mark - UITextField delegate
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    if (self.fahrenheitTextChanged ) {
+        self.fahrenheitTextChanged = NO;
+        self.fahrenheitTextField.textColor = [UIColor grayColor];
+        float fahrenheitValue = [newString floatValue];
+        float celsiusValue = (fahrenheitValue - 32)*5/9;
+        self.celsiusTextField.textColor = [UIColor redColor];
+        self.celsiusTextField.text = [NSString stringWithFormat:@"%0.1f", celsiusValue];
+    }
+    else if (self.celsiusTextChanged) {
+        self.celsiusTextChanged = NO;
+        self.celsiusTextField.textColor = [UIColor grayColor];
+        float celsiusValue = [newString floatValue];
+        float fahrenheitValue = (9*celsiusValue/5) + 32;
+        self.fahrenheitTextField.textColor = [UIColor redColor];
+        self.fahrenheitTextField.text =[NSString stringWithFormat:@"%0.1f", fahrenheitValue];
+        
+    }
+    
+    
+    return YES;
+}
+
+/*
+-(BOOL)textFieldShouldClear:(UITextField *)textField {
+    
+    return YES;
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    return YES;
+}
+ */
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     UIBarButtonItem *doneButtonItem =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone  target:self action:@selector(onDoneButton)];
     self.navigationItem.rightBarButtonItem = doneButtonItem;

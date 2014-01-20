@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC16E5B618861FD8005A9BB7 /* TemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC16E5B418861FD8005A9BB7 /* TemperatureViewController.m */; };
+		EC16E5B718861FD8005A9BB7 /* TemperatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC16E5B518861FD8005A9BB7 /* TemperatureViewController.xib */; };
 		ECBC9ACC1885263100E3E147 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBC9ACB1885263100E3E147 /* Foundation.framework */; };
 		ECBC9ACE1885263100E3E147 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBC9ACD1885263100E3E147 /* CoreGraphics.framework */; };
 		ECBC9AD01885263100E3E147 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBC9ACF1885263100E3E147 /* UIKit.framework */; };
@@ -19,8 +21,6 @@
 		ECBC9AE71885263100E3E147 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBC9ACF1885263100E3E147 /* UIKit.framework */; };
 		ECBC9AEF1885263100E3E147 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECBC9AED1885263100E3E147 /* InfoPlist.strings */; };
 		ECBC9AF11885263100E3E147 /* temperatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBC9AF01885263100E3E147 /* temperatureTests.m */; };
-		ECBC9AFD1885268F00E3E147 /* TemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBC9AFB1885268F00E3E147 /* TemperatureViewController.m */; };
-		ECBC9AFE1885268F00E3E147 /* TemperatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECBC9AFC1885268F00E3E147 /* TemperatureViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC16E5B318861FD8005A9BB7 /* TemperatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureViewController.h; sourceTree = "<group>"; };
+		EC16E5B418861FD8005A9BB7 /* TemperatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureViewController.m; sourceTree = "<group>"; };
+		EC16E5B518861FD8005A9BB7 /* TemperatureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemperatureViewController.xib; sourceTree = "<group>"; };
 		ECBC9AC81885263100E3E147 /* temperature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = temperature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBC9ACB1885263100E3E147 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ECBC9ACD1885263100E3E147 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,9 +53,6 @@
 		ECBC9AEC1885263100E3E147 /* temperatureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "temperatureTests-Info.plist"; sourceTree = "<group>"; };
 		ECBC9AEE1885263100E3E147 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ECBC9AF01885263100E3E147 /* temperatureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = temperatureTests.m; sourceTree = "<group>"; };
-		ECBC9AFA1885268F00E3E147 /* TemperatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemperatureViewController.h; path = ../TemperatureViewController.h; sourceTree = "<group>"; };
-		ECBC9AFB1885268F00E3E147 /* TemperatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TemperatureViewController.m; path = ../TemperatureViewController.m; sourceTree = "<group>"; };
-		ECBC9AFC1885268F00E3E147 /* TemperatureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TemperatureViewController.xib; path = ../TemperatureViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +112,11 @@
 		ECBC9AD11885263100E3E147 /* temperature */ = {
 			isa = PBXGroup;
 			children = (
+				EC16E5B318861FD8005A9BB7 /* TemperatureViewController.h */,
+				EC16E5B418861FD8005A9BB7 /* TemperatureViewController.m */,
+				EC16E5B518861FD8005A9BB7 /* TemperatureViewController.xib */,
 				ECBC9ADA1885263100E3E147 /* TMPAppDelegate.h */,
 				ECBC9ADB1885263100E3E147 /* TMPAppDelegate.m */,
-				ECBC9AFA1885268F00E3E147 /* TemperatureViewController.h */,
-				ECBC9AFB1885268F00E3E147 /* TemperatureViewController.m */,
-				ECBC9AFC1885268F00E3E147 /* TemperatureViewController.xib */,
 				ECBC9ADD1885263100E3E147 /* Images.xcassets */,
 				ECBC9AD21885263100E3E147 /* Supporting Files */,
 			);
@@ -229,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECBC9AD61885263100E3E147 /* InfoPlist.strings in Resources */,
-				ECBC9AFE1885268F00E3E147 /* TemperatureViewController.xib in Resources */,
+				EC16E5B718861FD8005A9BB7 /* TemperatureViewController.xib in Resources */,
 				ECBC9ADE1885263100E3E147 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECBC9AFD1885268F00E3E147 /* TemperatureViewController.m in Sources */,
+				EC16E5B618861FD8005A9BB7 /* TemperatureViewController.m in Sources */,
 				ECBC9ADC1885263100E3E147 /* TMPAppDelegate.m in Sources */,
 				ECBC9AD81885263100E3E147 /* main.m in Sources */,
 			);
@@ -452,6 +452,7 @@
 				ECBC9AF61885263100E3E147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECBC9AF71885263100E3E147 /* Build configuration list for PBXNativeTarget "temperatureTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +461,7 @@
 				ECBC9AF91885263100E3E147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
